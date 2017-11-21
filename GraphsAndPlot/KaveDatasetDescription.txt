@@ -1,0 +1,90 @@
+MSR Assignment Table Details
+1. Work around with user table -> Experience vs Team size, Education Vs team size, 
+
+Experience and team work
+what about education level and team work
+Relationship between experience and programming skill normal and C#.
+{
+    "ProfileId": an optional unique id that a user can freely choose
+    "Education": information about the highest degree a user holds
+Unknown,	
+22	None,
+23	Autodidact,
+24	Training,
+25	Bachelor,
+26	Master,
+27	PhD
+    "Position": information about the current job position of a user
+	Get Unique one from table.
+Unknown,	
+22	HobbyProgrammer,
+23	Student,
+24	ResearcherAcademic,
+25	ResearcherIndustry,
+26	SoftwareEngineer
+    "Projects": in which kind of projects did the user work, recently?
+
+ProjectsCourses = true,	
+57	ProjectsPersonal = true,
+58	ProjectsSharedSmall = true,
+59	ProjectsSharedMedium = true,
+    "Teams": in which kind of teams did the user work, recently?
+
+TeamsSolo = true,	
+62	TeamsSmall = true,
+63	TeamsMedium = true,
+64	TeamsLarge = true,
+
+
+    "CodeReviews": does the user regularly participate in code reviews?: 
+
+YesNoUnknown
+    "ProgrammingGeneral": self-estimation of the general programming
+
+ skills 1-7
+    "ProgrammingCSharp": self-estimation of the C# programming 
+
+skills 1-7
+    "Comment": free text form for feedback and suggestions
+}
+
+2. Builds(Dhanush)
+
+
+
+3. Debugger Events.
+
+
+
+4.	Git version (Dhanush).
+
+
+
+Relationship between git commits and builds and Debuggers
+
+
+
+
+public enum TestResult	
+80	{
+81	Unknown,
+82	Success,
+83	Failed,
+84	Error,
+85	Ignored
+
+
+
+{	
+24	public enum VersionControlActionType
+…	
+34	Pull,
+35	Rebase,
+36	RebaseFinished,
+37	Reset
+38	}
+
+
+
+After a successful built, do they commit or what version control action they take.
+After a successful test case, what version control action do they take.
