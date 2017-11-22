@@ -1,0 +1,211 @@
+MSR Assignment2 Results
+
+https://www.sharelatex.com/project/5a13733a0ee7337e67a48109
+Users Table:
+
+	Edu:-{0: 82, 1: 10, 2: 41, 3: 8, 4: 106, 5: 107, 6: 2}
+	There are 356 Unique profile id's in the user table and we assume all these are Unique users.
+	These people varied from Unknown,HobbyProgrammer,Student,ResearcherAcademic,ResearcherIndustry and
+	SoftwareEngineer.Unknown=78,HobbyProgrammer=20,Student=27,ResearcherAcademic=38,ResearcherIndustry=2
+	SoftwareEngineer=191. To talk about their Education, Unknown:82, 10 of them has None,41 of them are Autodidact,
+	Training=8,106 has bachelors degree, 5 of them has masters and 2 of them has PHD's.
+	To understand the programming experience, 0-2 as beginners, 3-5 as mid and 6 and 7 as highly experience.
+	{'high': 155, 'beg': 54, 'mid': 147}. 112 of them claimed that they do Code Reviews,168 of them they dint 
+	do code review. The experienced developers and mid level developers seems to be interested to work 
+	more in Solo, Small and Medium projects not that much with Large Projects. For Beginner level, information
+	is not proper. Apparently 55 of them has not worked in any of projects. For these people, Education is 
+	mostly unknown and their position is unknown. We include everyone with a unique IDE user id for all
+	further study.
+
+	Build Table:
+	"vsBuildActionBuild" -12662 are built events
+	"vsBuildActionRebuildAll" -639
+	"vsBuildActionClean" -263
+	"vsBuildActionDeploy" -9
+
+Build Targets:
+IDE build Configuration:
+"Debug"
+"Release"
+"Development"
+"DLL-Import Release"
+"Release with CouchDb"
+"Debug with CouchDb"
+"ReleaseWithCouchDb"
+"DebugWithCouchDb"
+"QA"
+"release"
+"DebugNet45"
+"staging"
+"produccion"
+"Debug-Any-CPU"
+"Debug_All"
+"Debug_IHE"
+"Staging"
+"Live"
+"CodeAnalysis"
+"test_int"
+"Local.Debug"
+
+Debug': 75450, u'Release': 2025, u'CodeAnalysis': 785, u'Local.Debug': 163, u'Staging': 66, u'produccion': 44
+{1: 75358, 0: 3278}) 1 successful.
+
+
+
+
+Version Control:
+There were 999 Unique sessions. And they had 
+
+
+Stats of Version control actions
+=======================
+
+Commit   62792
+Checkout   48303
+Rebase   25534
+Pull   21342
+Merge   12392
+RebaseFinished   11837
+CommitAmend   5293
+Reset   2039
+Clone   565
+CommitInitial   348
+
+174 session had no git actions.
+The following are sequence of Git actions for sessions marked by their frequency
+
+->CommitInitial->Commit->Commit->Commit   76
+->Clone->Checkout->Commit->Commit   71
+->Checkout->Checkout->Commit->Checkout   57
+->Clone->Commit->Commit->Commit   55
+->CommitInitial->Commit->Checkout->Commit   42
+->Clone   40
+->CommitInitial->Commit   38
+->Pull->Pull->Pull->Pull   37
+->Clone->Checkout->Checkout->Checkout   34
+->Checkout->Pull->Checkout->Checkout   32
+
+First Git action:
+
+first
+[(u'Clone', 403), (u'CommitInitial', 277), (u'Checkout', 136), (u'Commit', 79), (u'Pull', 56)]
+
+Last
+
+[(u'Commit', 524), (u'Checkout', 165), (u'Pull', 98), (u'Merge', 88), (u'RebaseFinished', 47)]
+
+Last Three activities
+
+->Commit->Commit->Commit, 204
+>Commit->Checkout->Commit, 48
+->Clone, 40
+->CommitInitial->Commit, 38), 
+->Checkout->Pull->Checkout, 32
+
+
+Lets check the relationship between build and Git: 459 matching IDE sessions between git and build.
+
+
+
+Total number:87755(Git) actions.
+41898 (Builds) actions.
+27037 There was an action followed by a single build event.
+For successful Build
+under_one_minute
+1581
+under_one_hour
+16546
+average time for git action in hours
+4.44994504693
+number of times git followed by build
+26280
+
+For Unsuccessful build
+
+under_one_minute
+12
+under_one_hour
+390
+average time for git action in hours
+6.74146888302
+number of times git followed by UNSuccessful build
+757
+
+Successful Build after an UnSuccessful one
+
+under_one_minute
+9
+under_one_hour
+124
+average time for git action in hours
+4.52583458458
+number of times git followed by Successful build
+222
+
+
+Time of the day analysis
+Build:
+['evening', 'late night', 'early_morning', 'morning', 'afternoon', 'night']
+[13315, 29073, 1802, 7421, 11016, 16009]
+
+Test
+
+['evening', 'late night', 'early_morning', 'morning', 'afternoon', 'night']
+[79966, 128789, 2410, 37508, 36094, 51346]
+
+Commit
+['evening', 'late night', 'early_morning', 'morning', 'afternoon', 'night']
+[11830, 20750, 909, 5477, 15040, 8786]
+
+Checkout
+
+['evening', 'late night', 'early_morning', 'morning', 'afternoon', 'night']
+[6896, 5916, 4189, 11253, 14712, 5337]
+
+Pull Request
+
+['evening', 'late night', 'early_morning', 'morning', 'afternoon', 'night']
+[2072, 2029, 2492, 5142, 6838, 2769]
+
+Merge Request
+['evening', 'late night', 'early_morning', 'morning', 'afternoon', 'night']
+[1603, 5053, 145, 1012, 2455, 2124]
+
+1. what git action does developers do after a test fail?
+2. what git action does developers do after a test pass?
+3. Is a failed test followed by a successful one ?
+
+
+Test Cases and Git control study:
+
+Number of Unique session id=229
+Number of Sessions which had a git action=157
+
+So we selected this 157 sessions for our study. This involved
+Git Actions:72029
+Test Cases:327463
+
+
+Statistics for a successful Test case:
+Total :250304
+under_one_minute
+7260
+under_one_hour
+201028
+average time for git action in hours
+1.63984338156
+number of times git followed by a successful test
+250304
+
+Statistics for a Unsuccessful Test case:
+
+43308 - Non Successful Test.
+under_one_minute
+306
+under_one_hour
+20345
+average time for git action in hours
+1.6908778862
+number of times git followed by a Failed test
+27670
+
